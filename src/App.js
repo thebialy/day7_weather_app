@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState } from 'react'
 
 const api = {
   key: "f01500f5e1b6f459334d86739fccf2ae",
@@ -9,7 +9,9 @@ const api = {
 
 function App() {
 
-  const dateCreator = (x) => {
+  
+
+  const todaysDate = (x) => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -22,7 +24,7 @@ function App() {
   }
 
   return (
-    <div className="app warm">
+    <div className="app">
       <main>
         <div className="search-box">
           <input 
@@ -32,12 +34,12 @@ function App() {
           />
         </div>
         <div className="location-box">
-          <div className="location">New York City, US</div>
-          <div className="date">{dateCreator(new Date())}</div>
+          <div className="location">Nashville, TN</div>
+          <div className="date">{todaysDate(new Date())}</div>
         </div>
         <div className="weather-box">
           <div className="temp">
-            30° F
+            30°F
           </div>
           <div className="weather">Sunny</div>
         </div>

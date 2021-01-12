@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=East+Sea+Dokdo&family=Yusei+Magic&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,9 @@
 }
 
 body {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'East Sea Dokdo', cursive;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 .app {
