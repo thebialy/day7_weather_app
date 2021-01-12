@@ -9,7 +9,18 @@ const api = {
 
 function App() {
 
+  const dateCreator = (x) => {
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+    const day = days[x.getDay()];
+    const date = x.getDate();
+    const month = months[x.getMonth()];
+    const year = x.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`
+  }
+  
   return (
     <div className="app">
       <main>
