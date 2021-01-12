@@ -33,7 +33,7 @@ function App() {
     const month = months[x.getMonth()];
     const year = x.getFullYear();
 
-    return `${day} ${date} ${month} ${year}`
+    return `${day}, ${month} ${date}, ${year}`
   }
 
   return (
