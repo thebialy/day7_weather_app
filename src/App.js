@@ -9,7 +9,20 @@ const api = {
 
 function App() {
 
-  
+  const [query, setQuery] = useState('');
+  const [weather, setWeather] = useState({});
+
+  const getWeather = (event) => {
+    if (event.key === "Enter") {
+      fetch(`${api.bse}weather?q=${query}&units=metric&APPID=${api.key}`)
+      .then(res => res.json())
+      .then(result => {
+        setWeather(result);
+        setQuery('');
+        console.log(result);
+      })
+    }
+  }
 
   const todaysDate = (x) => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -31,6 +44,9 @@ function App() {
             type="text" 
             className="search-bar"
             placeholder="Enter city name"
+            onChange={e => setQuery(e.target.value)}
+            value={query}
+            onKeyPress={getWeather}
           />
         </div>
         <div className="location-box">
