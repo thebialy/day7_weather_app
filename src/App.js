@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 
 const api = {
@@ -7,6 +8,8 @@ const api = {
 
 
 function App() {
+
+
   return (
     <div className="app">
       <main>
@@ -16,6 +19,10 @@ function App() {
             className="search-bar"
             placeholder="Enter city name"
           />
+        </div>
+        <div>
+          <div className="location">New York City, US</div>
+          <div className="date">{dateCreator(new Date())}</div>
         </div>
       </main>
     </div>
