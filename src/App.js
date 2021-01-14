@@ -7,7 +7,7 @@ const api = {
 }
 
 
-function App() {
+const App = () => {
 
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -51,7 +51,7 @@ function App() {
           />
         </div>
         {(typeof weather.main != "undefined") ? (
-        <div>
+        <div className="weather-container">
           <div className="location-box">
             <div className="location">{weather.name}, {weather.sys.country}</div>
             <div className="date">{todaysDate(new Date())}</div>
