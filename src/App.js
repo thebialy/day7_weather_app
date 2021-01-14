@@ -38,8 +38,11 @@ const App = () => {
 
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app cold') : 'app'}>
+      <head>  
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      </head>
       <main>
-        <div className="title"> Whats the weather in your city?</div>
+        <div className="title"> What's the weather in your city?</div>
         <div className="search-box">
           <input 
             type="text" 
@@ -51,19 +54,23 @@ const App = () => {
           />
         </div>
         {(typeof weather.main != "undefined") ? (
-        <div className="location-container">
+        <div className={(weather.main.temp > 16) ? 'weather-container' : 'cold-weather-container'}>
           <div className="background">
             <div className={(weather.main.temp > 16) ? 'warm1' : 'cold1'}></div>
             <div className={(weather.main.temp > 16) ? 'warm2' : 'cold2'}></div>
             <div className={(weather.main.temp > 16) ? 'warm3' : 'cold3'}></div>
-            <div className="location">{weather.name}, {weather.sys.country}</div>
-            <div className="date">{todaysDate(new Date())}</div>
-          </div>
-          <div className="weather-box">
-            <h1 className="temp">
-              {Math.round((weather.main.temp) * 1.8 + 32)}°F
-            </h1>
-            <div className="wind">Wind: {Math.round(weather.wind.speed)} MPH</div>
+            <div className="content">
+              <h1 className="condition">{(weather.main.temp >16) ? 'Warm' : 'Cold'}</h1>
+              <div className="location">
+                {weather.name}, {weather.sys.country}
+              </div>
+              <div className="date">
+                {todaysDate(new Date())}
+              </div>
+              <h1 className="temp">
+                {Math.round((weather.main.temp) * 1.8 + 32)}°F
+              </h1>
+            </div>         
           </div>
         </div>
         ) : ('')}
