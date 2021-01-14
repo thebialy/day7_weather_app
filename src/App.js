@@ -51,15 +51,18 @@ const App = () => {
           />
         </div>
         {(typeof weather.main != "undefined") ? (
-        <div className="weather-container">
-          <div className="location-box">
+        <div className="location-container">
+          <div className="background">
+            <div className={(weather.main.temp > 16) ? 'warm1' : 'cold1'}></div>
+            <div className={(weather.main.temp > 16) ? 'warm2' : 'cold2'}></div>
+            <div className={(weather.main.temp > 16) ? 'warm3' : 'cold3'}></div>
             <div className="location">{weather.name}, {weather.sys.country}</div>
             <div className="date">{todaysDate(new Date())}</div>
           </div>
           <div className="weather-box">
-            <div className="temp">
+            <h1 className="temp">
               {Math.round((weather.main.temp) * 1.8 + 32)}°F
-            </div>
+            </h1>
             <div className="wind">Wind: {Math.round(weather.wind.speed)} MPH</div>
           </div>
         </div>
