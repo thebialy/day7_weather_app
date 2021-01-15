@@ -234,6 +234,10 @@ main {
   bottom: 15px;
 }
 
+.globe {
+  margin-right: 5px;
+}
+
 @keyframes enlarge{
   50%{
       transform: scale(1.2);
