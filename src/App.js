@@ -23,6 +23,7 @@ const App = () => {
     }
   }
 
+
   const todaysDate = (x) => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -31,7 +32,7 @@ const App = () => {
     const date = x.getDate();
     const month = months[x.getMonth()];
     const year = x.getFullYear();
-
+    console.log(new Date())
     return `${day}, ${month} ${date}, ${year}`
   }
 
