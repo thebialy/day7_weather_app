@@ -59,7 +59,8 @@ const App = () => {
             <div className={(weather.main.temp > 16) ? 'warm2' : 'cold2'}></div>
             <div className={(weather.main.temp > 16) ? 'warm3' : 'cold3'}></div>
             <div className="content">
-              <h1 className="condition"> {(weather.main.temp >16) ? 'Warm' : 'Cold'}</h1>
+              {(weather.main.temp >16) ? (
+                <h1 class="Condition"><i class="material-icons sun">wb_sunny</i> Warm</h1>) : ('')}
               <div className="location">
                 {weather.name}, {weather.sys.country}
               </div>
