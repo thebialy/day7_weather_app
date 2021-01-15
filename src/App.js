@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import moment from 'moment'
 
 const api = {
   key: "f01500f5e1b6f459334d86739fccf2ae",
@@ -23,18 +24,7 @@ const App = () => {
     }
   }
 
-
-  const todaysDate = (x) => {
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-    const day = days[x.getDay()];
-    const date = x.getDate();
-    const month = months[x.getMonth()];
-    const year = x.getFullYear();
-    console.log(new Date())
-    return `${day}, ${month} ${date}, ${year}`
-  }
+  const dateToday = moment().format('llll');
 
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app cold') : 'app'}>
@@ -66,7 +56,7 @@ const App = () => {
                 {weather.name}, {weather.sys.country}
               </div>
               <div className="date">
-                {todaysDate(new Date())}
+                {dateToday}
               </div>
               <h1 className="temp">
                 {Math.round((weather.main.temp) * 1.8 + 32)}°F
