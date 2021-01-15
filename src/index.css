@@ -183,8 +183,7 @@ main {
 
 .sun{
   z-index: 1000;
-  font-size: 30px !important;
-  margin-left: 5px;
+  font-size: 25px !important;
 }
 
 .condition{
