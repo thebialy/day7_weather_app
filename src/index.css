@@ -67,7 +67,6 @@ main {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-/* new stuff for widget */
 .weather-container{
   overflow: hidden;
   z-index: 10;
