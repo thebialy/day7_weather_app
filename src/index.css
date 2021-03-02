@@ -112,7 +112,6 @@ main {
   top: -70px;
   border-radius: 50%;
   background-color: rgba(246,140,31,0.7);
-  
   animation: enlarge;
   animation-duration: 11s;
   animation-iteration-count: infinite;
@@ -127,7 +126,6 @@ main {
   top: -100px;
   border-radius: 50%;
   background-color: rgba(241,125,45,0.7);
-  
   animation: enlarge;
   animation-duration: 14s;
   animation-iteration-count: infinite;
@@ -155,7 +153,6 @@ main {
   top: -70px;
   border-radius: 50%;
   background-color: #0058B3;
-  
   animation: enlarge;
   animation-duration: 11s;
   animation-iteration-count: infinite;
@@ -170,7 +167,6 @@ main {
   top: -100px;
   border-radius: 50%;
   background-color: rgba(0, 31, 153, 1);
-  
   animation: enlarge;
   animation-duration: 14s;
   animation-iteration-count: infinite;
